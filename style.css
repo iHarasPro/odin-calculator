@@ -1,0 +1,79 @@
+/* ------------------------------------------------------------------------------------------ */
+/* CSS Reset
+/* ------------------------------------------------------------------------------------------ */
+
+*, *::before, *::after {
+  box-sizing: border-box;                         /* Simplify Box Size calculations           */
+  padding: 0;                                     /* Remove default Padding values            */
+  margin:  0;                                     /* Remove default Margin  values            */
+}
+
+html {
+  color-scheme: dark light;                       /* Use User-Agent styles for Dark Theme     */
+  line-height: 1;                                 /* Remove spacing caused by Line Height     */
+}
+
+input, button, textarea, select {
+  font: inherit;                                  /* Make Form Fonts consistent               */
+}
+
+/* ------------------------------------------------------------------------------------------ */
+/* Layout
+/* ------------------------------------------------------------------------------------------ */
+
+main {
+  max-inline-size: 24rem;
+  margin-block:  1.0rem;
+  margin-inline: auto;
+  border: 0.2rem double #666;
+  border-radius:  1.0rem;
+  padding-block:  1.0rem;
+  padding-inline: 1.0rem;
+  display: grid;
+  grid-template:
+    "screen screen screen screen" 1fr
+    "num7   num8   num9   div"    1fr
+    "num4   num5   num6   mul"    1fr
+    "num1   num2   num3   sub"    1fr
+    "clr    num0   equ    add"    1fr
+    / 1fr   1fr    1fr    1fr;
+  gap: 1.0rem;
+  font-size: 1.5rem;
+
+  .screen { grid-area: screen; }
+  .num9   { grid-area: num9;   }
+  .num8   { grid-area: num8;   }
+  .num7   { grid-area: num7;   }
+  .num6   { grid-area: num6;   }
+  .num5   { grid-area: num5;   }
+  .num4   { grid-area: num4;   }
+  .num3   { grid-area: num3;   }
+  .num2   { grid-area: num2;   }
+  .num1   { grid-area: num1;   }
+  .num0   { grid-area: num0;   }
+  .add    { grid-area: add;    }
+  .sub    { grid-area: sub;    }
+  .mul    { grid-area: mul;    }
+  .div    { grid-area: div;    }
+  .equ    { grid-area: equ;    }
+  .clr    { grid-area: clr;    }
+}
+
+/* ------------------------------------------------------------------------------------------ */
+/* Styling
+/* ------------------------------------------------------------------------------------------ */
+
+.screen {
+  border: 0.2rem solid #666;
+  padding-inline: 1.0rem;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
+button {
+  padding: 1.5rem;
+  aspect-ratio: 1;
+}
+
+/* ------------------------------------------------------------------------------------------ */
